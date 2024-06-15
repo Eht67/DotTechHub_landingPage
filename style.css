@@ -35,7 +35,7 @@
 }
 
 html {
-    font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     scroll-behavior: smooth;
 }
 
@@ -50,7 +50,6 @@ a {
 
 section:not(.hero-section) {
     padding-block: 90px;
-    min-height: 100vh;
 
     h1 {
         width: fit-content;
@@ -117,10 +116,11 @@ section.hero-section {
         }
 
         /* hamburger start */
-        .hamburger{
+        .hamburger {
             display: none;
             transition: 0.2s ease-in;
         }
+
         .hamburger .line {
             width: 40px;
             height: 5px;
@@ -250,6 +250,42 @@ section.why-section {
     background-image: url(./images/why-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+        margin-top: 44px;
+
+        .why-card {
+            display: flex;
+            gap: 22px;
+            padding: 23px;
+            border-radius: 12px;
+            background-color: #1f0fa34f;
+            backdrop-filter: blur(7px);
+            color: #fff;
+
+            .why-card-icon {
+                font-size: 28px;
+
+                div.fa{
+                    /* background: #000ce1a8; */
+                    background-color: #000ce1;
+                    padding: 15px;
+                    border-radius: 50%;
+                }
+            }
+
+            .why-card-content{
+                p.title{
+                    font-size: 28px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
 }
 
 section.courses-section {
