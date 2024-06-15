@@ -44,7 +44,8 @@
                 z-index: 4;
 
                 li {
-                    background-color: rgb(19 12 131);
+                    background-color: #1f0fa3;
+                    border: 1px solid;
                     box-shadow: 2px 3px #fcb866;
 
                     &:hover {
