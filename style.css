@@ -266,19 +266,22 @@ section.why-section {
             backdrop-filter: blur(7px);
             color: #fff;
 
-            .why-card-icon {
+            .why-card-icon-div {
                 font-size: 28px;
 
-                div.fa{
-                    /* background: #000ce1a8; */
+                .why-card-icon {
                     background-color: #000ce1;
                     padding: 15px;
                     border-radius: 50%;
+                    aspect-ratio: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
 
-            .why-card-content{
-                p.title{
+            .why-card-content {
+                p.title {
                     font-size: 28px;
                     font-weight: 700;
                     margin-bottom: 10px;
