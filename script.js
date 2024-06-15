@@ -1,5 +1,5 @@
 let menu = document.querySelector('#menu');
-let menuToggler = document.querySelector('#menu-toggler');
+let menuToggler = document.querySelector('#hamburger');
 let backdrop = document.querySelector('#backdrop');
 let header = document.querySelectorAll('.header')[0]; 
 let isMenuOpen = false;
@@ -9,8 +9,8 @@ menuToggler.addEventListener('click', () => {
         menu.style.right = '0';
         backdrop.style.width = '100vw';
         menuToggler.style.transform =  'translateX(var(--menu-toggler-distane))';
-        menuToggler.classList.remove('fa-bars');
-        menuToggler.classList.add('fa-close');
+        // menuToggler.classList.remove('fa-bars');
+        menuToggler.classList.add('is-active');
         isMenuOpen = true;
     }
 
@@ -18,8 +18,8 @@ menuToggler.addEventListener('click', () => {
         menu.style.right = '-180px';
         backdrop.style.width = '0vw';
         menuToggler.style.transform =  'translateX(0)';
-        menuToggler.classList.remove('fa-close');
-        menuToggler.classList.add('fa-bars');
+        menuToggler.classList.remove('is-active');
+        // menuToggler.classList.add('fa-bars');
         isMenuOpen = false;
     }
 })
@@ -29,8 +29,8 @@ menu.addEventListener('click', () => {
         menu.style.right = '-180px';
         backdrop.style.width = '0vw';
         menuToggler.style.transform =  'translateX(0)';
-        menuToggler.classList.remove('fa-close');
-        menuToggler.classList.add('fa-bars');
+        menuToggler.classList.remove('is-active');
+        // menuToggler.classList.add('fa-bars');
         isMenuOpen = false;
     }
 })
@@ -40,8 +40,8 @@ backdrop.addEventListener('click', () => {
         menu.style.right = '-180px';
         backdrop.style.width = '0vw';
         menuToggler.style.transform =  'translateX(0)';
-        menuToggler.classList.remove('fa-close');
-        menuToggler.classList.add('fa-bars');
+        menuToggler.classList.remove('is-active');
+        // menuToggler.classList.add('fa-bars');
         isMenuOpen = false;
     }
 })
