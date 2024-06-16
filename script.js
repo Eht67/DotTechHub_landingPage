@@ -9,7 +9,6 @@ menuToggler.addEventListener('click', () => {
         menu.style.right = '0';
         backdrop.style.width = '100vw';
         menuToggler.style.transform =  'translateX(var(--menu-toggler-distane))';
-        // menuToggler.classList.remove('fa-bars');
         menuToggler.classList.add('is-active');
         isMenuOpen = true;
     }
@@ -19,7 +18,6 @@ menuToggler.addEventListener('click', () => {
         backdrop.style.width = '0vw';
         menuToggler.style.transform =  'translateX(0)';
         menuToggler.classList.remove('is-active');
-        // menuToggler.classList.add('fa-bars');
         isMenuOpen = false;
     }
 })
@@ -30,7 +28,6 @@ menu.addEventListener('click', () => {
         backdrop.style.width = '0vw';
         menuToggler.style.transform =  'translateX(0)';
         menuToggler.classList.remove('is-active');
-        // menuToggler.classList.add('fa-bars');
         isMenuOpen = false;
     }
 })
@@ -41,7 +38,6 @@ backdrop.addEventListener('click', () => {
         backdrop.style.width = '0vw';
         menuToggler.style.transform =  'translateX(0)';
         menuToggler.classList.remove('is-active');
-        // menuToggler.classList.add('fa-bars');
         isMenuOpen = false;
     }
 })
