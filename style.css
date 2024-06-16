@@ -119,7 +119,7 @@ section.hero-section {
             display: none;
             transition: 0.2s ease-in;
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
             }
 
@@ -145,7 +145,7 @@ section.hero-section {
                 -o-transform: translateY(11px) rotate(45deg);
                 transform: translateY(11px) rotate(45deg);
             }
-    
+
             &.is-active .line:nth-child(3) {
                 -webkit-transform: translateY(-11px) rotate(-45deg);
                 -ms-transform: translateY(-11px) rotate(-45deg);
@@ -291,6 +291,35 @@ section.courses-section {
     background-image: url(./images/courses-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
+
+    .courses-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 44px;
+
+        .courses-card {
+            background-color: #730d8d4f;
+            backdrop-filter: blur(7px);
+            color: #fff;
+            border-radius: 10px;
+            overflow: clip;
+
+            img {
+                aspect-ratio: 1.6;
+            }
+
+            p {
+                margin: 12px;
+            }
+
+            p.title {
+                font-size: 23px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
 section.locations-section {

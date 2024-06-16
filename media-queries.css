@@ -1,4 +1,13 @@
 /* media queries */
+@media (width < 1100px) {
+    section.courses-section{
+        .courses-grid{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+}
+
 @media (width < 940px) {
     section.hero-section {
         .header {
@@ -60,6 +69,12 @@
     section.why-section {
         .why-grid {
             grid-template-columns: 1fr;
+        }
+    }
+
+    section.courses-section{
+        .courses-grid{
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
@@ -146,6 +161,12 @@
                     font-size: 14px;
                 }
             }
+        }
+    }
+
+    section.courses-section{
+        .courses-grid{
+            grid-template-columns: 1fr;
         }
     }
 
