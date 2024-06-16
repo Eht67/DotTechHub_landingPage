@@ -65,7 +65,7 @@ section:not(.hero-section) {
 
     p.small-heading{
         font-size: 23px;
-        background-color: #1111b940;
+        background-color: #4343a340;
         color: #fff;
         backdrop-filter: blur(10px);
         width: fit-content;
