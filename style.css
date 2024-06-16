@@ -54,6 +54,7 @@ section:not(.hero-section) {
     h1 {
         width: fit-content;
         margin-inline: auto;
+        margin-bottom: 44px;
         color: #fff;
         font-size: 36px;
         padding: 12px 23px;
@@ -65,13 +66,14 @@ section:not(.hero-section) {
     p.small-heading{
         font-size: 23px;
         background-color: #1111b940;
+        color: #fff;
         backdrop-filter: blur(10px);
         width: fit-content;
         margin-inline: auto;
         padding: 12px 23px;
         border-radius: 12px;
         font-weight: 300;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 }
 
@@ -263,7 +265,6 @@ section.why-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 22px;
-        margin-top: 44px;
 
         .why-card {
             display: flex;
@@ -309,7 +310,6 @@ section.courses-section {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 16px;
-        margin-top: 44px;
 
         .courses-card {
             background-color: #730d8d4f;
@@ -345,13 +345,7 @@ section.locations-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
-        margin-top: 44px;
         color: #fff;
-
-        p.small-heading{
-            grid-column: span 2;
-            text-align: center;
-        }
 
         p.city-name{
             font-size: 32px;

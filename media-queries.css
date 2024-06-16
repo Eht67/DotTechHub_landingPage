@@ -81,10 +81,6 @@
     section.locations-section {
         .locations-grid {
             grid-template-columns: 1fr;
-
-            p.small-heading {
-                grid-column: span 1;
-            }
         }
     }
 }
