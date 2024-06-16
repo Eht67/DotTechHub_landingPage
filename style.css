@@ -189,6 +189,7 @@ section.hero-section {
             max-width: 1280px;
             width: calc(100vw - 40px);
             margin-inline: auto;
+            padding-top: 10px;
             z-index: 4;
 
             img.logo {
