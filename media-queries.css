@@ -134,18 +134,16 @@
                         font-size: 22px;
                     }
                 }
-
-                .why-card-content {
-                    p.title {
-                        font-size: 22px;
-                    }
-
-                    p.description {
-                        font-size: 14px;
-                    }
-                }
             }
         }
+    }
+
+    p.title {
+        font-size: 22px;
+    }
+
+    p.description {
+        font-size: 14px;
     }
 }
 
@@ -205,22 +203,20 @@
             .why-card {
                 flex-direction: column;
                 align-items: center;
+                padding: 14px;
 
                 .why-card-icon {
                     font-size: 20px;
                 }
-
-                .why-card-content {
-                    p.title {
-                        font-size: 18px;
-                    }
-
-                    p.description {
-                        font-size: 12px;
-                    }
-                }
             }
         }
+    }
+    p.title {
+        font-size: 18px;
+    }
+
+    p.description {
+        font-size: 12px;
     }
 }
 
