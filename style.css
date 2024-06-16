@@ -261,6 +261,7 @@ section.why-section {
             background-color: #1f0fa34f;
             backdrop-filter: blur(7px);
             color: #fff;
+            box-shadow: 0 0 12px -6px;
 
             .why-card-icon-div {
                 font-size: 28px;
@@ -302,8 +303,9 @@ section.courses-section {
             background-color: #730d8d4f;
             backdrop-filter: blur(7px);
             color: #fff;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: clip;
+            box-shadow: 0 0 12px -6px;
 
             img {
                 aspect-ratio: 1.6;
