@@ -102,6 +102,14 @@
         p.small-heading {
             font-size: 18px;
         }
+
+        p.title {
+            font-size: 22px !important;
+        }
+    
+        p.description {
+            font-size: 14px !important;
+        }
     }
 
     section.hero-section {
@@ -159,14 +167,6 @@
             }
         }
     }
-
-    p.title {
-        font-size: 22px;
-    }
-
-    p.description {
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 500px) {
@@ -214,6 +214,14 @@
         p.small-heading {
             font-size: 16px;
         }
+
+        p.title {
+            font-size: 18px !important;
+        }
+    
+        p.description {
+            font-size: 12px !important;
+        }
     }
 
     section.hero-section {
@@ -244,14 +252,6 @@
                 }
             }
         }
-    }
-
-    p.title {
-        font-size: 18px;
-    }
-
-    p.description {
-        font-size: 12px;
     }
 
     section.locations-section {
