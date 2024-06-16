@@ -1,11 +1,11 @@
 /* media queries */
 @media (width < 1100px) {
-    section.courses-section{
-        .courses-grid{
+    section.courses-section {
+        .courses-grid {
             grid-template-columns: repeat(3, 1fr);
         }
     }
-    
+
 }
 
 @media (width < 940px) {
@@ -72,9 +72,19 @@
         }
     }
 
-    section.courses-section{
-        .courses-grid{
+    section.courses-section {
+        .courses-grid {
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    section.locations-section {
+        .locations-grid {
+            grid-template-columns: 1fr;
+
+            p.small-heading {
+                grid-column: span 1;
+            }
         }
     }
 }
@@ -87,6 +97,10 @@
             font-size: 24px;
             padding: 8px 16px;
             border-radius: 8px;
+        }
+
+        p.small-heading {
+            font-size: 18px;
         }
     }
 
@@ -120,6 +134,14 @@
                 .btn-div {
                     justify-content: center;
                 }
+            }
+        }
+    }
+
+    section.locations-section {
+        .locations-grid {
+            p.city-name {
+                font-size: 24px;
             }
         }
     }
@@ -162,9 +184,17 @@
         }
     }
 
-    section.courses-section{
-        .courses-grid{
+    section.courses-section {
+        .courses-grid {
             grid-template-columns: 1fr;
+        }
+    }
+
+    section.locations-section {
+        .locations-grid {
+            iframe {
+                height: 350px;
+            }
         }
     }
 
@@ -179,6 +209,10 @@
         h1 {
             font-size: 20px;
             padding: 8px 16px;
+        }
+
+        p.small-heading {
+            font-size: 16px;
         }
     }
 
@@ -211,12 +245,21 @@
             }
         }
     }
+
     p.title {
         font-size: 18px;
     }
 
     p.description {
         font-size: 12px;
+    }
+
+    section.locations-section {
+        .locations-grid {
+            p.city-name {
+                font-size: 18px;
+            }
+        }
     }
 }
 
@@ -229,6 +272,14 @@
         .header {
             .navlist {
                 width: fit-content;
+            }
+        }
+    }
+
+    section.locations-section {
+        .locations-grid {
+            iframe {
+                height: 300px;
             }
         }
     }
