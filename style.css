@@ -367,7 +367,6 @@ section.team-section {
     background-image: url(./images/team-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: -1px;
 }
 
 section.contact-section {
