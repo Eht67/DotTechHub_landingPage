@@ -26,9 +26,9 @@
 }
 
 @media (width < 820px) {
-    section.hero-section{
+    section.hero-section {
         .header {
-            .hamburger{
+            .hamburger {
                 display: block;
                 z-index: 4;
             }
@@ -57,8 +57,8 @@
         }
     }
 
-    section.why-section{
-        .why-grid{
+    section.why-section {
+        .why-grid {
             grid-template-columns: 1fr;
         }
     }
@@ -76,7 +76,7 @@
     }
 
     section.hero-section {
-        .header{
+        .header {
             img.logo {
                 width: 120px;
             }
@@ -87,7 +87,7 @@
                 }
             }
         }
-        
+
         .content {
             height: 80vh;
             grid-template-columns: 1fr;
@@ -110,22 +110,22 @@
     }
 }
 
-@media (max-width: 630px){
-    section.why-section{
-        .why-grid{
-            .why-card{
-                .why-card-icon-div{
-                    .why-card-icon{
+@media (max-width: 630px) {
+    section.why-section {
+        .why-grid {
+            .why-card {
+                .why-card-icon-div {
+                    .why-card-icon {
                         font-size: 22px;
                     }
                 }
 
-                .why-card-content{
-                    p.title{
+                .why-card-content {
+                    p.title {
                         font-size: 22px;
                     }
 
-                    p.description{
+                    p.description {
                         font-size: 14px;
                     }
                 }
@@ -179,21 +179,22 @@
         }
     }
 
-    section.why-section{
-        .why-grid{
-            .why-card{
+    section.why-section {
+        .why-grid {
+            .why-card {
                 flex-direction: column;
                 align-items: center;
-                .why-card-icon{
+
+                .why-card-icon {
                     font-size: 20px;
                 }
 
-                .why-card-content{
-                    p.title{
+                .why-card-content {
+                    p.title {
                         font-size: 18px;
                     }
 
-                    p.description{
+                    p.description {
                         font-size: 12px;
                     }
                 }
@@ -214,4 +215,13 @@
             }
         }
     }
+}
+
+@media (max-width: 315px) {
+    .hamburger.is-active {
+        background-color: black;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
 }
