@@ -183,15 +183,6 @@
             grid-template-columns: 1fr;
         }
     }
-
-    section.locations-section {
-        .locations-grid {
-            iframe {
-                height: 350px;
-            }
-        }
-    }
-
 }
 
 @media (max-width: 364px) {
@@ -266,14 +257,6 @@
         .header {
             .navlist {
                 width: fit-content;
-            }
-        }
-    }
-
-    section.locations-section {
-        .locations-grid {
-            iframe {
-                height: 300px;
             }
         }
     }
