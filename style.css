@@ -379,6 +379,7 @@ section.contact-section {
         background-color: #1f0fa34f;
         backdrop-filter: blur(10px);
         border-radius: 12px;
+        box-shadow: 0 0 8px -3px #fff;
 
         .form-grid {
             display: grid;
