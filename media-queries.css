@@ -223,14 +223,14 @@
         }
 
         .find-us{
-            font-size: 26px;
+            font-size: 24px;
         }
     }
 }
 
 @media (max-width: 364px) {
     :root {
-        --menu-toggler-distane: -150px;
+        --menu-toggler-distane: -114px;
     }
 
     section:not(.hero-section) {
@@ -255,7 +255,7 @@
     section.hero-section {
         .header {
             .navlist {
-                width: 140px;
+                width: fit-content;
             }
         }
 
@@ -289,18 +289,10 @@
             }
         }
     }
-}
 
-@media (max-width: 364px) {
-    :root {
-        --menu-toggler-distane: -114px;
-    }
-
-    section.hero-section {
-        .header {
-            .navlist {
-                width: fit-content;
-            }
+    section.contact-section{
+        .find-us{
+            font-size: 22px;
         }
     }
 }
