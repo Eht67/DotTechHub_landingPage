@@ -441,6 +441,7 @@ section.contact-section {
         text-align: center;
         margin-top: 12px;
         user-select: none;
+        margin-right: 8px;
 
         span{
             margin-left: 8px;
