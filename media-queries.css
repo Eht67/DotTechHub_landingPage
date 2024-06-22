@@ -32,6 +32,18 @@
             }
         }
     }
+
+    section.contact-section{
+        .form{
+            .form-grid{
+                grid-template-columns: repeat(2, 1fr);
+
+                input[placeholder=Subject] ,textarea{
+                    grid-column: span 2;
+                }
+            }
+        }
+    }
 }
 
 @media (width < 820px) {
@@ -147,6 +159,18 @@
             }
         }
     }
+
+    section.contact-section{
+        .form{
+            .form-grid{
+                grid-template-columns: 1fr;
+
+                input[placeholder=Subject] ,textarea{
+                    grid-column: span 1;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 630px) {
@@ -181,6 +205,29 @@
     section.courses-section {
         .courses-grid {
             grid-template-columns: 1fr;
+        }
+    }
+
+    section.contact-section{
+        .form{
+            .form-grid{
+                grid-template-columns: 100%;
+
+                input ,textarea{
+                    font-size: 14px;
+                }
+            }
+            .send-btn{
+                font-size: 14px;
+            }
+        }
+
+        .find-us{
+            font-size: 20px;
+
+            span{
+                font-size: 28px;
+            }
         }
     }
 }
