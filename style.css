@@ -397,6 +397,7 @@ section.contact-section {
                 color: #fff;
                 border: 1px solid transparent;
                 outline: none;
+                caret-color: #fcb866;
 
                 &::placeholder {
                     color: #c7c7c7;
