@@ -385,7 +385,7 @@ section.team-section {
 
             .card-data {
                 color: #fff;
-                background-color: #fcb86617;
+                background-color: rgb(24 22 193 / 20%);
                 backdrop-filter: blur(7px);
                 padding: 16px;
                 border-radius: 12px;
@@ -398,6 +398,7 @@ section.team-section {
                 .position{
                     font-size: 20px;
                     font-weight: 700;
+                    color: #ffdb00;
                 }
 
                 p.title {
