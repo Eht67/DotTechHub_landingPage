@@ -5,10 +5,6 @@
             .team-card {
                 overflow: hidden;
 
-                .card-data {
-                    bottom: -77px;
-                }
-
                 &:hover {
                     cursor: pointer;
                     animation: show-overflow 2s forwards;

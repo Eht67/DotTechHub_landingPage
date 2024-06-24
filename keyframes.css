@@ -25,7 +25,7 @@
 
 @keyframes show-data {
     0%{
-        bottom: -77px;
+        bottom: -73px;
     }
     50%{
         bottom: 40px;
@@ -43,7 +43,7 @@
       bottom: 40px;
     }
     100% {
-      bottom: -77px;
+      bottom: -73px;
     }
   }
 
