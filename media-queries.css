@@ -1,4 +1,6 @@
 /* media queries */
+
+/* for devices that can hover */
 @media (hover) {
     section.team-section {
         .team-grid {
