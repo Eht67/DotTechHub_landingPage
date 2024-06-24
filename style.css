@@ -368,6 +368,46 @@ section.team-section {
     background-image: url(./images/team-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
+
+    .team-grid {
+        display: grid;
+        /* grid-template-columns: repeat(4, 1fr); */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        column-gap: 16px;
+        row-gap: 28px;
+
+        .team-card {
+            position: relative;
+
+            img {
+                border-radius: 16px;
+            }
+
+            .card-data {
+                color: #fff;
+                background-color: #fcb86617;
+                backdrop-filter: blur(7px);
+                padding: 16px;
+                border-radius: 12px;
+                position: absolute;
+                bottom: -18px;
+                left: 7%;
+                right: 7%;
+                box-shadow: 0 0 18px -6px #fff;
+                
+                .position{
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                p.title {
+                    font-size: 23px;
+                    font-weight: 700;
+                    margin-block: 10px;
+                }
+            }
+        }
+    }
 }
 
 section.contact-section {
@@ -403,7 +443,7 @@ section.contact-section {
                     color: #c7c7c7;
                 }
 
-                &:focus{
+                &:focus {
                     border: 1px solid #fcb866;
                 }
             }
@@ -430,14 +470,14 @@ section.contact-section {
             margin-left: auto;
             transition: 0.2s ease-in;
 
-            &:hover{
+            &:hover {
                 background-color: #1a73e8af;
                 cursor: pointer;
             }
         }
     }
 
-    .find-us{
+    .find-us {
         font-size: 24px;
         font-weight: 300;
         color: #fff;
@@ -446,12 +486,13 @@ section.contact-section {
         user-select: none;
         margin-right: 8px;
 
-        span{
+        span {
             margin-left: 8px;
 
-            i{
+            i {
                 transition: 0.2s ease-in;
-                &:hover{
+
+                &:hover {
                     color: #fcb866;
                     transform: translateY(-3px);
                 }
