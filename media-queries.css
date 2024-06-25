@@ -8,7 +8,6 @@
                 overflow: hidden;
 
                 &:hover {
-                    cursor: pointer;
                     animation: show-overflow 2s forwards;
 
                     .card-data {
