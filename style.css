@@ -369,43 +369,76 @@ section.team-section {
     background-size: cover;
     background-repeat: no-repeat;
 
-    .team-grid {
-        display: grid;
-        /* grid-template-columns: repeat(4, 1fr); */
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        column-gap: 16px;
-        row-gap: 28px;
+    .carousal{
+        position: relative;
+        .left-button, .right-button{
+            position: absolute;
+            top: 44%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 4;
+            font-size: 26px;
+            color: #000;
+            background-color: #fff;
+            box-shadow: 0 0px 12px 3px;
+            transition: 0.3s ease-in;
 
-        .team-card {
-            position: relative;
-
-            img {
-                border-radius: 16px;
-                display: block;
+            &:hover{
+                cursor: pointer;
+                background-color: #dfdfdf;
             }
+        }
+        
+        .left-button{
+            left: -15px;
+        }
 
-            .card-data {
-                color: #fff;
-                background-color: rgb(24 22 193 / 20%);
-                backdrop-filter: blur(7px);
-                padding: 16px;
-                border-radius: 12px;
-                position: absolute;
-                bottom: -18px;
-                left: 7%;
-                right: 7%;
-                box-shadow: 0 0 18px -6px #fff;
-                
-                .position{
-                    font-size: 20px;
-                    font-weight: 700;
-                    color: #ffdb00;
+        .right-button{
+            right: -15px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100%/4) - 9px);
+            overflow-x: clip;
+            gap: 12px;
+    
+            .team-card {
+                position: relative;
+    
+                img {
+                    border-radius: 16px;
+                    display: block;
                 }
-
-                p.title {
-                    font-size: 23px;
-                    font-weight: 700;
-                    margin-block: 10px;
+    
+                .card-data {
+                    color: #fff;
+                    background-color: rgb(24 22 193 / 20%);
+                    backdrop-filter: blur(7px);
+                    padding: 16px;
+                    border-radius: 12px;
+                    position: absolute;
+                    bottom: -18px;
+                    left: 7%;
+                    right: 7%;
+                    box-shadow: 0 0 18px -6px #fff;
+                    
+                    .position{
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #ffdb00;
+                    }
+    
+                    p.title {
+                        font-size: 23px;
+                        font-weight: 700;
+                        margin-block: 10px;
+                    }
                 }
             }
         }

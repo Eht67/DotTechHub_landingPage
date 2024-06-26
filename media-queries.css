@@ -3,23 +3,25 @@
 /* for devices that can hover */
 @media (hover) {
     section.team-section {
-        .team-grid {
-            .team-card {
-                overflow: hidden;
-
-                &:hover {
-                    animation: show-overflow 2s forwards;
-
-                    .card-data {
-                        animation: show-data 1s forwards;
+        .carousal{
+            .team-grid {
+                .team-card {
+                    overflow: hidden;
+    
+                    &:hover {
+                        animation: show-overflow 2s forwards;
+    
+                        .card-data {
+                            animation: show-data 1s forwards;
+                        }
                     }
-                }
-
-                &:not(:hover) {
-                    animation: remove-overflow 2s forwards;
-
-                    .card-data {
-                        animation: remove-data 1s forwards;
+    
+                    &:not(:hover) {
+                        animation: remove-overflow 2s forwards;
+    
+                        .card-data {
+                            animation: remove-data 1s forwards;
+                        }
                     }
                 }
             }
@@ -32,6 +34,14 @@
     section.courses-section {
         .courses-grid {
             grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    section.team-section{
+        .carousal{
+            .team-grid{
+                grid-auto-columns: calc((100%/3) - 8px);
+            }
         }
     }
 
@@ -122,6 +132,14 @@
         .locations-grid {
             iframe{
                 aspect-ratio: 1;
+            }
+        }
+    }
+
+    section.team-section{
+        .carousal{
+            .team-grid{
+                grid-auto-columns: calc((100%/2) - 6px);
             }
         }
     }
@@ -238,6 +256,14 @@
     section.courses-section {
         .courses-grid {
             grid-template-columns: 1fr;
+        }
+    }
+
+    section.team-section{
+        .carousal{
+            .team-grid{
+                grid-auto-columns: calc((100%));
+            }
         }
     }
 
