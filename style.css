@@ -343,9 +343,9 @@ section.locations-section {
     background-repeat: no-repeat;
 
     .locations-grid {
-        display: grid;
+        /* display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 16px; */
         color: #fff;
 
         p.city-name {
@@ -357,7 +357,7 @@ section.locations-section {
 
         iframe {
             width: 100%;
-            aspect-ratio: 1.3;
+            aspect-ratio: 2;
             border-radius: 12px;
             box-shadow: 0 0 12px -3px #fff;
         }

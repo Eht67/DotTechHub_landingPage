@@ -120,7 +120,9 @@
 
     section.locations-section {
         .locations-grid {
-            grid-template-columns: 1fr;
+            iframe{
+                aspect-ratio: 1;
+            }
         }
     }
 }
