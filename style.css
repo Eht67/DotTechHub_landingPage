@@ -49,6 +49,14 @@ a {
     color: inherit;
 }
 
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+
+    & > *{
+        scroll-snap-align: start;
+    }
+}
+
 section:not(.hero-section) {
     padding-block: 90px;
 
