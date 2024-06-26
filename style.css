@@ -333,7 +333,9 @@ section.courses-section {
             }
 
             img {
+                inline-size: 100%;
                 aspect-ratio: 1.6;
+                object-fit: cover;
             }
 
             p {
