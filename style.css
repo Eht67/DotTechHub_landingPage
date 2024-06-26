@@ -420,9 +420,16 @@ section.team-section {
             display: grid;
             grid-auto-flow: column;
             grid-auto-columns: calc((100%/4) - 9px);
-            overflow-x: clip;
+            overflow-x: scroll;
+            padding: 32px 0;
             user-select: none;
             gap: 12px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
 
             .team-card {
                 position: relative;
