@@ -145,9 +145,9 @@ section.hero-section {
                 background-color: #ecf0f1;
                 display: block;
                 margin: 6px auto;
-                -webkit-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
             }
 
             &.is-active .line:nth-child(2) {
@@ -277,9 +277,9 @@ section.why-section {
             color: #fff;
             box-shadow: 0 0 12px -4px;
             user-select: none;
-            transition: background-color 0.3s ease-in;
+            transition: background-color 0.2s ease-in;
 
-            &:hover{
+            &:hover {
                 background-color: #1e0fa3a4;
             }
 
@@ -326,9 +326,9 @@ section.courses-section {
             overflow: clip;
             box-shadow: 0 0 12px -4px;
             user-select: none;
-            transition: background-color 0.3s ease-in;
+            transition: background-color 0.2s ease-in;
 
-            &:hover{
+            &:hover {
                 background-color: #730d8da4;
             }
 
@@ -381,9 +381,10 @@ section.team-section {
     background-size: cover;
     background-repeat: no-repeat;
 
-    .carousal{
+    .carousal {
         position: relative;
-        .carousal-button{
+
+        .carousal-button {
             position: absolute;
             top: 42%;
             height: 50px;
@@ -394,23 +395,24 @@ section.team-section {
             align-items: center;
             z-index: 4;
             font-size: 26px;
-            color: #000;
-            background-color: #fff;
-            box-shadow: 0 0px 12px 0px;
-            transition: 0.3s ease-in;
+            color: #fff;
+            background-color: #5314cd63;
+            backdrop-filter: blur(7px);
+            box-shadow: 0 0px 12px -1px;
+            transition: 0.2s ease-in;
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
-                box-shadow: 0 0px 12px 2px;
-                transform: translateY(-5px);
+                box-shadow: 0 0px 12px 1px;
+                text-shadow: 0px 0px 4px #000;
             }
         }
-        
-        .left-button{
+
+        .left-button {
             left: -10px;
         }
 
-        .right-button{
+        .right-button {
             right: -10px;
         }
 
@@ -421,15 +423,15 @@ section.team-section {
             overflow-x: clip;
             user-select: none;
             gap: 12px;
-    
+
             .team-card {
                 position: relative;
-    
+
                 img {
                     border-radius: 16px;
                     display: block;
                 }
-    
+
                 .card-data {
                     color: #fff;
                     background-color: rgb(24 22 193 / 20%);
@@ -441,13 +443,13 @@ section.team-section {
                     left: 7%;
                     right: 7%;
                     box-shadow: 0 0 18px -6px #fff;
-                    
-                    .position{
+
+                    .position {
                         font-size: 20px;
                         font-weight: 700;
                         color: #ffdb00;
                     }
-    
+
                     p.title {
                         font-size: 23px;
                         font-weight: 700;
