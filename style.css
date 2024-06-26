@@ -69,7 +69,7 @@ section:not(.hero-section) {
         padding: 12px 23px;
         backdrop-filter: blur(15px);
         border-radius: 12px;
-        border: 1px solid #fff;
+        background-color: #4343a340;
     }
 
     p.small-heading {
