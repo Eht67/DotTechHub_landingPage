@@ -276,6 +276,12 @@ section.why-section {
             backdrop-filter: blur(7px);
             color: #fff;
             box-shadow: 0 0 12px -4px;
+            user-select: none;
+            transition: background-color 0.3s ease-in;
+
+            &:hover{
+                background-color: #1e0fa3a4;
+            }
 
             .why-card-icon-div {
                 font-size: 28px;
@@ -319,6 +325,12 @@ section.courses-section {
             border-radius: 12px;
             overflow: clip;
             box-shadow: 0 0 12px -4px;
+            user-select: none;
+            transition: background-color 0.3s ease-in;
+
+            &:hover{
+                background-color: #730d8da4;
+            }
 
             img {
                 aspect-ratio: 1.6;
@@ -373,7 +385,7 @@ section.team-section {
         position: relative;
         .left-button, .right-button{
             position: absolute;
-            top: 44%;
+            top: 42%;
             height: 50px;
             width: 50px;
             border-radius: 50%;
@@ -384,12 +396,13 @@ section.team-section {
             font-size: 26px;
             color: #000;
             background-color: #fff;
-            box-shadow: 0 0px 12px 3px;
+            box-shadow: 0 0px 12px 0px;
             transition: 0.3s ease-in;
 
             &:hover{
                 cursor: pointer;
-                background-color: #dfdfdf;
+                box-shadow: 0 0px 12px 2px;
+                transform: translateY(-5px);
             }
         }
         
