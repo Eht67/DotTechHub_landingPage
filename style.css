@@ -383,7 +383,7 @@ section.team-section {
 
     .carousal{
         position: relative;
-        .left-button, .right-button{
+        .carousal-button{
             position: absolute;
             top: 42%;
             height: 50px;
