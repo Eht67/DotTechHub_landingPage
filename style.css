@@ -419,7 +419,7 @@ section.team-section {
             }
 
             &.disabled{
-                opacity: 0.3;
+                opacity: 0.4;
 
                 &:hover {
                     cursor: initial;
