@@ -477,6 +477,10 @@ section.team-section {
                 }
             }
         }
+
+        .test{
+            grid-auto-columns: calc((100%/5) - 9px);
+        }
     }
 }
 
