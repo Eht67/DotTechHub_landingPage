@@ -49,10 +49,10 @@ a {
     color: inherit;
 }
 
-.snaps-inline{
+.snaps-inline {
     scroll-snap-type: inline mandatory;
 
-    & > *{
+    &>* {
         scroll-snap-align: start;
     }
 }
@@ -158,22 +158,34 @@ section.hero-section {
                 transition: all 0.2s ease-in-out;
             }
 
-            &.is-active .line:nth-child(2) {
-                opacity: 0;
+            &.is-active {
+                .line {
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                }
             }
 
-            &.is-active .line:nth-child(1) {
-                -webkit-transform: translateY(11px) rotate(45deg);
-                -ms-transform: translateY(11px) rotate(45deg);
-                -o-transform: translateY(11px) rotate(45deg);
-                transform: translateY(11px) rotate(45deg);
+            &.is-active {
+                .line {
+                    &:nth-child(1) {
+                        -webkit-transform: translateY(11px) rotate(45deg);
+                        -ms-transform: translateY(11px) rotate(45deg);
+                        -o-transform: translateY(11px) rotate(45deg);
+                        transform: translateY(11px) rotate(45deg);
+                    }
+                }
             }
 
-            &.is-active .line:nth-child(3) {
-                -webkit-transform: translateY(-11px) rotate(-45deg);
-                -ms-transform: translateY(-11px) rotate(-45deg);
-                -o-transform: translateY(-11px) rotate(-45deg);
-                transform: translateY(-11px) rotate(-45deg);
+            &.is-active {
+                .line {
+                    &:nth-child(3) {
+                        -webkit-transform: translateY(-11px) rotate(-45deg);
+                        -ms-transform: translateY(-11px) rotate(-45deg);
+                        -o-transform: translateY(-11px) rotate(-45deg);
+                        transform: translateY(-11px) rotate(-45deg);
+                    }
+                }
             }
         }
 
@@ -391,7 +403,7 @@ section.team-section {
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: calc(90px - 32px);
-    
+
     .carousal {
         position: relative;
 
@@ -418,7 +430,7 @@ section.team-section {
                 text-shadow: 0px 0px 4px #000;
             }
 
-            &.disabled{
+            &.disabled {
                 opacity: 0.4;
 
                 &:hover {
