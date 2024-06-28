@@ -57,7 +57,6 @@ let carousals = document.querySelectorAll('.carousal');
 
 for (let i = 0; i < carousals.length; i++) {
     let carousal = carousals[i];
-
     let left_btn = carousal.querySelectorAll('.left-button')[0];
     let right_btn = carousal.querySelectorAll('.right-button')[0];
     let carousal_inner = carousal.querySelectorAll('.carousal-inner')[0];
@@ -71,5 +70,23 @@ for (let i = 0; i < carousals.length; i++) {
         carousal_inner.scrollLeft = carousal_inner.scrollLeft + carousal_item_width;
     })
 
+    if (carousal_inner.scrollLeft === 0) {
+        left_btn.classList.add('disabled');
+    }
+
+    carousal_inner.addEventListener('scroll', () => {
+        if (carousal_inner.scrollLeft === 0) {
+            left_btn.classList.add('disabled');
+        }
+
+        if (carousal_inner.scrollLeft > 0 && carousal_inner.scrollLeft < (carousal_inner.scrollWidth - carousal_inner.offsetWidth)) {
+            left_btn.classList.remove('disabled');
+            right_btn.classList.remove('disabled');
+        }
+
+        if (carousal_inner.scrollLeft === carousal_inner.scrollWidth - carousal_inner.offsetWidth) {
+            right_btn.classList.add('disabled');
+        }
+    })
     
 }
