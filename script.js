@@ -1,14 +1,14 @@
 let menu = document.querySelector('#menu');
 let menuToggler = document.querySelector('#hamburger');
 let backdrop = document.querySelector('#backdrop');
-let header = document.querySelectorAll('.header')[0]; 
+let header = document.querySelectorAll('.header')[0];
 let isMenuOpen = false;
 
 menuToggler.addEventListener('click', () => {
     if (!isMenuOpen) {
         menu.style.right = '0';
         backdrop.style.width = '100vw';
-        menuToggler.style.transform =  'translateX(var(--menu-toggler-distane))';
+        menuToggler.style.transform = 'translateX(var(--menu-toggler-distane))';
         menuToggler.classList.add('is-active');
         isMenuOpen = true;
     }
@@ -16,7 +16,7 @@ menuToggler.addEventListener('click', () => {
     else if (isMenuOpen) {
         menu.style.right = '-180px';
         backdrop.style.width = '0vw';
-        menuToggler.style.transform =  'translateX(0)';
+        menuToggler.style.transform = 'translateX(0)';
         menuToggler.classList.remove('is-active');
         isMenuOpen = false;
     }
@@ -26,7 +26,7 @@ menu.addEventListener('click', () => {
     if (isMenuOpen) {
         menu.style.right = '-180px';
         backdrop.style.width = '0vw';
-        menuToggler.style.transform =  'translateX(0)';
+        menuToggler.style.transform = 'translateX(0)';
         menuToggler.classList.remove('is-active');
         isMenuOpen = false;
     }
@@ -36,18 +36,40 @@ backdrop.addEventListener('click', () => {
     if (isMenuOpen) {
         menu.style.right = '-180px';
         backdrop.style.width = '0vw';
-        menuToggler.style.transform =  'translateX(0)';
+        menuToggler.style.transform = 'translateX(0)';
         menuToggler.classList.remove('is-active');
         isMenuOpen = false;
     }
 })
 
 window.addEventListener('scroll', () => {
-    if (scrollY >= 700){
+    if (scrollY >= 700) {
         header.classList.add('scrolled');
     }
 
-    if (scrollY < 700){
+    if (scrollY < 700) {
         header.classList.remove('scrolled');
     }
 })
+
+
+let carousals = document.querySelectorAll('.carousal');
+
+for (let i = 0; i < carousals.length; i++) {
+    let carousal = carousals[i];
+
+    let left_btn = carousal.querySelectorAll('.left-button')[0];
+    let right_btn = carousal.querySelectorAll('.right-button')[0];
+    let carousal_inner = carousal.querySelectorAll('.carousal-inner')[0];
+    let carousal_item_width = carousal_inner.querySelectorAll('.carousal-item')[0].offsetWidth;
+
+    left_btn.addEventListener('click', () => {
+        carousal_inner.scrollLeft = carousal_inner.scrollLeft - carousal_item_width;
+    })
+
+    right_btn.addEventListener('click', () => {
+        carousal_inner.scrollLeft = carousal_inner.scrollLeft + carousal_item_width;
+    })
+
+    
+}

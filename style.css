@@ -428,6 +428,7 @@ section.team-section {
         }
 
         .team-grid {
+            scroll-behavior: smooth;
             display: grid;
             grid-auto-flow: column;
             grid-auto-columns: calc((100%/4) - 9px);
