@@ -59,6 +59,19 @@ a {
 
 section:not(.hero-section) {
     padding-block: 90px;
+    position: relative;
+
+    &::after {
+        --_size-controller: 150px;
+        content: '';
+        width: 100%;
+        height: var(--_size-controller);
+        position: absolute;
+        top: calc(-1*(var(--_size-controller) / 2));
+        backdrop-filter: blur(26px);
+        background-color: #4343a312;
+        mask-image: linear-gradient(transparent, #000, #000, transparent);
+    }
 
     h1 {
         width: fit-content;
