@@ -65,6 +65,7 @@ section:not(.hero-section) {
         --_size-controller: 150px;
         content: '';
         width: 100vw;
+        max-width: 100%;
         height: var(--_size-controller);
         position: absolute;
         top: calc(-1*(var(--_size-controller) / 2));
