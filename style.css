@@ -64,7 +64,7 @@ section:not(.hero-section) {
     &::after {
         --_size-controller: 150px;
         content: '';
-        width: 100%;
+        width: 100vw;
         height: var(--_size-controller);
         position: absolute;
         top: calc(-1*(var(--_size-controller) / 2));
