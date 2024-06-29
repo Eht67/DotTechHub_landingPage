@@ -124,6 +124,7 @@ img {
 section.hero-section {
     min-height: 100svh;
     height: fit-content;
+    background-color: #44016f;
     background-image: url(./images/hero-bg-clear.avif);
     background-size: cover;
     background-repeat: no-repeat;
