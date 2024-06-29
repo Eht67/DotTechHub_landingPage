@@ -60,7 +60,7 @@ a {
 }
 
 section:not(.hero-section) {
-    padding-block: 90px;
+    padding-block: 110px;
     position: relative;
 
     &::after {
@@ -418,7 +418,7 @@ section.team-section {
     background-image: url(./images/team-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: calc(90px - 32px);
+    padding-bottom: calc(110px - 32px);
 
     .carousal {
         position: relative;

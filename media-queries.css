@@ -147,7 +147,7 @@
 
 @media (width < 700px) {
     section:not(.hero-section) {
-        padding-block: 76px;
+        padding-block: 90px;
 
         h1 {
             font-size: 24px;
@@ -208,6 +208,10 @@
                 font-size: 24px;
             }
         }
+    }
+
+    section.team-section{
+        padding-bottom: calc(90px - 32px);
     }
 
     section.contact-section {
