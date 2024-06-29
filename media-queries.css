@@ -1,24 +1,31 @@
 /* media queries */
 
+@media (max-height: 930px) {
+    section.hero-section {
+        padding-bottom: 110px;
+        min-height: calc(100svh - 110px);
+    }
+}
+
 /* for devices that can hover */
 @media (hover) {
     section.team-section {
-        .carousal{
+        .carousal {
             .team-grid {
                 .team-card {
                     overflow: hidden;
-    
+
                     &:hover {
                         animation: show-overflow 2s forwards;
-    
+
                         .card-data {
                             animation: show-data 1s forwards;
                         }
                     }
-    
+
                     &:not(:hover) {
                         animation: remove-overflow 2s forwards;
-    
+
                         .card-data {
                             animation: remove-data 1s forwards;
                         }
@@ -37,9 +44,9 @@
         }
     }
 
-    section.team-section{
-        .carousal{
-            .team-grid{
+    section.team-section {
+        .carousal {
+            .team-grid {
                 grid-auto-columns: calc((100%/3) - 8px);
             }
         }
@@ -56,7 +63,7 @@
         }
 
         .content {
-            height: calc(100vh - 90px);
+            min-height: calc(100vh - 90px);
 
             .left {
                 h1 {
@@ -130,15 +137,15 @@
 
     section.locations-section {
         .locations-grid {
-            iframe{
+            iframe {
                 aspect-ratio: 1;
             }
         }
     }
 
-    section.team-section{
-        .carousal{
-            .team-grid{
+    section.team-section {
+        .carousal {
+            .team-grid {
                 grid-auto-columns: calc((100%/2) - 6px);
             }
         }
@@ -182,7 +189,7 @@
         }
 
         .content {
-            height: 80vh;
+            min-height: 80vh;
             grid-template-columns: 1fr;
             gap: 32px;
             transform: translateY(10%);
@@ -210,7 +217,7 @@
         }
     }
 
-    section.team-section{
+    section.team-section {
         padding-bottom: calc(90px - 32px);
     }
 
@@ -263,9 +270,9 @@
         }
     }
 
-    section.team-section{
-        .carousal{
-            .team-grid{
+    section.team-section {
+        .carousal {
+            .team-grid {
                 grid-auto-columns: calc((100%));
             }
         }

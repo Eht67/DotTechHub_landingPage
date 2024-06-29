@@ -256,7 +256,7 @@ section.hero-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        height: calc(100vh - 113px);
+        min-height: calc(100vh - 113px);
         animation: scale-out 0.5s ease-in-out 1;
         position: relative;
 
