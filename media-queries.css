@@ -18,7 +18,7 @@
                     overflow: hidden;
 
                     &:hover {
-                        animation: show-overflow 2s forwards;
+                        animation: show-overflow 1s forwards;
 
                         .card-data {
                             animation: show-data 1s forwards;
@@ -26,7 +26,7 @@
                     }
 
                     &:not(:hover) {
-                        animation: remove-overflow 2s forwards;
+                        animation: remove-overflow 1s forwards;
 
                         .card-data {
                             animation: remove-data 1s forwards;
