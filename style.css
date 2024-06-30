@@ -40,6 +40,7 @@ html {
     font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     scroll-behavior: smooth;
     scrollbar-color: #1f0fa3 #000;
+    background-color: #44016f;
 }
 
 h1 {
@@ -125,7 +126,6 @@ img {
 section.hero-section {
     min-height: 100svh;
     height: fit-content;
-    background-color: #44016f;
     background-image: url(./images/hero-bg-clear.avif);
     background-size: cover;
     background-repeat: no-repeat;
