@@ -43,11 +43,11 @@ backdrop.addEventListener('click', () => {
 })
 
 window.addEventListener('scroll', () => {
-    if (scrollY >= 700) {
+    if (scrollY >= 644) {
         header.classList.add('scrolled');
     }
 
-    if (scrollY < 700) {
+    else {
         header.classList.remove('scrolled');
     }
 })
@@ -88,5 +88,5 @@ for (let i = 0; i < carousals.length; i++) {
             right_btn.classList.add('disabled');
         }
     })
-    
+
 }

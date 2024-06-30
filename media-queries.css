@@ -1,9 +1,11 @@
 /* media queries */
 
-@media (max-height: 930px) {
+@media (max-height: 930px) and (max-width: 700px) {
     section.hero-section {
-        padding-bottom: 110px;
-        min-height: calc(100svh - 110px);
+        .content {
+            padding-bottom: 110px;
+            min-height: calc(100svh - 113px - 110px);
+        }
     }
 }
 
