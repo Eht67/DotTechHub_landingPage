@@ -523,6 +523,7 @@ section.contact-section {
 
             input,
             textarea {
+                color: inherit;
                 padding: 12px;
                 border-radius: 10px;
                 font-size: 16px;
