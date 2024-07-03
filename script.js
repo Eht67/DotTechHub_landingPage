@@ -58,14 +58,14 @@ for (let i = 0; i < carousels.length; i++) {
     let carousel_item_width = carousel_inner.querySelectorAll('.carousel-item')[0].offsetWidth;
 
     carousel.addEventListener('mouseover', () => {
-        document.addEventListener('keydown', handleKeyboardNav);
+        document.addEventListener('keydown', handleKeyboardKeys);
     });
 
     carousel.addEventListener('mouseout', () => {
-        document.removeEventListener('keydown', handleKeyboardNav);
+        document.removeEventListener('keydown', handleKeyboardKeys);
     });
 
-    function handleKeyboardNav(event) {
+    function handleKeyboardKeys(event) {
         const keyCode = event.keyCode;
         if (keyCode === 37) {
             carousel_inner.scrollLeft = carousel_inner.scrollLeft - carousel_item_width;
