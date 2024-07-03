@@ -1,5 +1,4 @@
 /* main style sheet */
-
 @font-face {
     font-family: 'Noto Sans';
     font-weight: 300;
@@ -34,13 +33,19 @@
 
 :root {
     --menu-toggler-distane: -166px;
+    --blur-controller: 7px;
 }
 
 html {
     font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     scroll-behavior: smooth;
     scrollbar-color: #1f0fa3 #000;
+    color: #fff;
     background-color: #44016f;
+    background-image: url(./images/html_bg.avif);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
@@ -62,30 +67,15 @@ a {
 
 section:not(.hero-section) {
     padding-block: 110px;
-    position: relative;
-
-    &::after {
-        --_size-controller: 150px;
-        content: '';
-        width: 100vw;
-        max-width: 100%;
-        height: var(--_size-controller);
-        position: absolute;
-        top: calc(-1*(var(--_size-controller) / 2));
-        backdrop-filter: blur(26px);
-        background-color: #4343a312;
-        mask-image: linear-gradient(transparent, #000, #000, transparent);
-    }
 
     h1 {
         width: fit-content;
         white-space: nowrap;
         margin-inline: auto;
         margin-bottom: 44px;
-        color: #fff;
         font-size: 36px;
         padding: 12px 23px;
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(var(--blur-controller));
         border-radius: 12px;
         background-color: #4343a340;
     }
@@ -93,8 +83,7 @@ section:not(.hero-section) {
     p.small-heading {
         font-size: 23px;
         background-color: #4343a340;
-        color: #fff;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(var(--blur-controller));
         width: fit-content;
         margin-inline: auto;
         padding: 12px 23px;
@@ -217,17 +206,9 @@ section.hero-section {
                 padding: 8px 14px;
                 background-color: rgba(255, 255, 255, 0.2);
                 border-radius: 100vw;
-                color: #fff;
                 font-weight: 600;
                 user-select: none;
                 transition: 0.2s ease-in;
-
-                &:hover {
-                    color: #fcb866;
-                    cursor: pointer;
-                    box-shadow: 3px 4px;
-                    transform: translateY(-4px);
-                }
             }
         }
 
@@ -246,8 +227,8 @@ section.hero-section {
 
             .navlist {
                 li {
-                    background-color: #1f0fa3;
-                    border: 1px solid #fff;
+                    background-color: #1a01e7;
+                    border: 2px solid;
                 }
             }
         }
@@ -262,7 +243,6 @@ section.hero-section {
         position: relative;
 
         .left {
-            color: #fff;
 
             h1 {
                 width: 12ch;
@@ -279,7 +259,6 @@ section.hero-section {
                     font-size: 18px;
                     padding: 12px 23px;
                     background-color: #D28320;
-                    color: #fff;
                     border-radius: 12px;
                     user-select: none;
                     transition: 0.2s ease-in;
@@ -296,9 +275,22 @@ section.hero-section {
 }
 
 section.why-section {
-    background-image: url(./images/why-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+        --_size-controller: 50px;
+        content: '';
+        width: 100vw;
+        max-width: 100%;
+        height: var(--_size-controller);
+        position: absolute;
+        top: calc(-1*(var(--_size-controller) / 2));
+        backdrop-filter: blur(12px);
+        background-color: #4343a312;
+        mask-image: linear-gradient(transparent, #000, #000, transparent);
+    }
 
     .why-grid {
         display: grid;
@@ -311,8 +303,7 @@ section.why-section {
             padding: 23px;
             border-radius: 12px;
             background-color: #1f0fa34f;
-            backdrop-filter: blur(7px);
-            color: #fff;
+            backdrop-filter: blur(var(--blur-controller));
             box-shadow: 0 0 12px -4px;
             user-select: none;
             transition: background-color 0.2s ease-in;
@@ -347,7 +338,6 @@ section.why-section {
 }
 
 section.courses-section {
-    background-image: url(./images/courses-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -358,8 +348,7 @@ section.courses-section {
 
         .courses-card {
             background-color: #730d8d4f;
-            backdrop-filter: blur(7px);
-            color: #fff;
+            backdrop-filter: blur(var(--blur-controller));
             border-radius: 12px;
             overflow: clip;
             box-shadow: 0 0 12px -4px;
@@ -390,7 +379,6 @@ section.courses-section {
 }
 
 section.locations-section {
-    background-image: url(./images/locations-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -398,7 +386,6 @@ section.locations-section {
         /* display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 16px; */
-        color: #fff;
 
         p.city-name {
             font-size: 32px;
@@ -417,15 +404,14 @@ section.locations-section {
 }
 
 section.team-section {
-    background-image: url(./images/team-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: calc(110px - 32px);
 
-    .carousal {
+    .carousel {
         position: relative;
 
-        .carousal-button {
+        .carousel-button {
             position: absolute;
             top: 42%;
             height: 50px;
@@ -436,9 +422,8 @@ section.team-section {
             align-items: center;
             z-index: 2;
             font-size: 26px;
-            color: #fff;
             background-color: #5314cd63;
-            backdrop-filter: blur(7px);
+            backdrop-filter: blur(var(--blur-controller));
             box-shadow: 0 0px 12px -1px;
             transition: box-shadow 0.2s ease-in, text-shadow 0.2s ease-in, opacity 0.2s ease-in;
 
@@ -493,9 +478,8 @@ section.team-section {
                 }
 
                 .card-data {
-                    color: #fff;
                     background-color: rgb(24 22 193 / 20%);
-                    backdrop-filter: blur(7px);
+                    backdrop-filter: blur(var(--blur-controller));
                     padding: 16px;
                     border-radius: 12px;
                     position: absolute;
@@ -522,14 +506,13 @@ section.team-section {
 }
 
 section.contact-section {
-    background-image: url(./images/contact-bg.avif);
     background-size: cover;
     background-repeat: no-repeat;
 
     .form {
         padding: 18px;
         background-color: #1f0fa34f;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(var(--blur-controller));
         border-radius: 12px;
         box-shadow: 0 0 8px -3px #fff;
 
@@ -545,7 +528,6 @@ section.contact-section {
                 font-size: 16px;
                 font-family: inherit;
                 background-color: #aaaaaa69;
-                color: #fff;
                 border: 1px solid transparent;
                 outline: none;
                 caret-color: #fcb866;
@@ -572,7 +554,6 @@ section.contact-section {
             font-size: 18px;
             font-weight: 600;
             text-transform: uppercase;
-            color: #fff;
             width: fit-content;
             padding: 10px 20px;
             border-radius: 10px;
@@ -591,7 +572,6 @@ section.contact-section {
     .find-us {
         font-size: 24px;
         font-weight: 300;
-        color: #fff;
         text-align: center;
         margin-top: 12px;
         user-select: none;

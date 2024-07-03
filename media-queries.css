@@ -1,5 +1,4 @@
 /* media queries */
-
 @media (max-height: 930px) and (max-width: 700px) {
     section.hero-section {
         .content {
@@ -11,8 +10,23 @@
 
 /* for devices that can hover */
 @media (hover) {
+    section.hero-section{
+        .header{
+            .navlist{
+                li{
+                    &:hover {
+                        color: #fcb866;
+                        cursor: pointer;
+                        box-shadow: 3px 4px;
+                        transform: translateY(-4px);
+                    }
+                }
+            }
+        }
+    }
+
     section.team-section {
-        .carousal {
+        .carousel {
             .team-grid {
                 .team-card {
                     overflow: hidden;
@@ -47,7 +61,7 @@
     }
 
     section.team-section {
-        .carousal {
+        .carousel {
             .team-grid {
                 grid-auto-columns: calc((100%/3) - 8px);
             }
@@ -105,7 +119,7 @@
             .navlist {
                 position: absolute;
                 right: -180px;
-                top: 40%;
+                top: 42%;
                 flex-direction: column;
                 width: 160px;
                 text-align: center;
@@ -121,6 +135,12 @@
                     }
                 }
 
+            }
+
+            &.scrolled {
+                .navlist{
+                    top: 35%;
+                }
             }
         }
     }
@@ -146,7 +166,7 @@
     }
 
     section.team-section {
-        .carousal {
+        .carousel {
             .team-grid {
                 grid-auto-columns: calc((100%/2) - 6px);
             }
@@ -273,7 +293,7 @@
     }
 
     section.team-section {
-        .carousal {
+        .carousel {
             .team-grid {
                 grid-auto-columns: calc((100%));
             }

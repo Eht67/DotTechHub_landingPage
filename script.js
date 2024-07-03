@@ -2,9 +2,10 @@ let menu = document.querySelector('#menu');
 let menuToggler = document.querySelector('#hamburger');
 let backdrop = document.querySelector('#backdrop');
 let header = document.querySelectorAll('.header')[0];
+let logo = document.querySelectorAll('.logo')[0];
 let isMenuOpen = false;
 
-menuToggler.addEventListener('click', () => {
+const toggleMenu = () => {
     if (!isMenuOpen) {
         menu.style.right = '0';
         backdrop.style.width = '100vw';
@@ -20,9 +21,9 @@ menuToggler.addEventListener('click', () => {
         menuToggler.classList.remove('is-active');
         isMenuOpen = false;
     }
-})
+}
 
-menu.addEventListener('click', () => {
+const closeMenu = () => {
     if (isMenuOpen) {
         menu.style.right = '-180px';
         backdrop.style.width = '0vw';
@@ -30,17 +31,12 @@ menu.addEventListener('click', () => {
         menuToggler.classList.remove('is-active');
         isMenuOpen = false;
     }
-})
+}
 
-backdrop.addEventListener('click', () => {
-    if (isMenuOpen) {
-        menu.style.right = '-180px';
-        backdrop.style.width = '0vw';
-        menuToggler.style.transform = 'translateX(0)';
-        menuToggler.classList.remove('is-active');
-        isMenuOpen = false;
-    }
-})
+menuToggler.addEventListener('click', toggleMenu);
+menu.addEventListener('click', closeMenu);
+backdrop.addEventListener('click', closeMenu);
+logo.addEventListener('click', closeMenu);
 
 window.addEventListener('scroll', () => {
     if (scrollY >= 644) {
@@ -52,41 +48,57 @@ window.addEventListener('scroll', () => {
     }
 })
 
+let carousels = document.querySelectorAll('.carousel');
 
-let carousals = document.querySelectorAll('.carousal');
+for (let i = 0; i < carousels.length; i++) {
+    let carousel = carousels[i];
+    let left_btn = carousel.querySelectorAll('.left-button')[0];
+    let right_btn = carousel.querySelectorAll('.right-button')[0];
+    let carousel_inner = carousel.querySelectorAll('.carousel-inner')[0];
+    let carousel_item_width = carousel_inner.querySelectorAll('.carousel-item')[0].offsetWidth;
 
-for (let i = 0; i < carousals.length; i++) {
-    let carousal = carousals[i];
-    let left_btn = carousal.querySelectorAll('.left-button')[0];
-    let right_btn = carousal.querySelectorAll('.right-button')[0];
-    let carousal_inner = carousal.querySelectorAll('.carousal-inner')[0];
-    let carousal_item_width = carousal_inner.querySelectorAll('.carousal-item')[0].offsetWidth;
+    carousel.addEventListener('mouseover', () => {
+        document.addEventListener('keydown', handleKeyboardNav);
+    });
+
+    carousel.addEventListener('mouseout', () => {
+        document.removeEventListener('keydown', handleKeyboardNav);
+    });
+
+    function handleKeyboardNav(event) {
+        const keyCode = event.keyCode;
+        if (keyCode === 37) {
+            carousel_inner.scrollLeft = carousel_inner.scrollLeft - carousel_item_width;
+        }
+        else if (keyCode === 39) {
+            carousel_inner.scrollLeft = carousel_inner.scrollLeft + carousel_item_width;
+        }
+    }
 
     left_btn.addEventListener('click', () => {
-        carousal_inner.scrollLeft = carousal_inner.scrollLeft - carousal_item_width;
+        carousel_inner.scrollLeft = carousel_inner.scrollLeft - carousel_item_width;
     })
 
     right_btn.addEventListener('click', () => {
-        carousal_inner.scrollLeft = carousal_inner.scrollLeft + carousal_item_width;
+        carousel_inner.scrollLeft = carousel_inner.scrollLeft + carousel_item_width;
     })
 
-    if (carousal_inner.scrollLeft === 0) {
+    if (carousel_inner.scrollLeft === 0) {
         left_btn.classList.add('disabled');
     }
 
-    carousal_inner.addEventListener('scroll', () => {
-        if (carousal_inner.scrollLeft === 0) {
+    carousel_inner.addEventListener('scroll', () => {
+        if (carousel_inner.scrollLeft === 0) {
             left_btn.classList.add('disabled');
         }
 
-        if (carousal_inner.scrollLeft > 0 && carousal_inner.scrollLeft < (carousal_inner.scrollWidth - carousal_inner.offsetWidth)) {
+        if (carousel_inner.scrollLeft > 0 && carousel_inner.scrollLeft < (carousel_inner.scrollWidth - carousel_inner.offsetWidth)) {
             left_btn.classList.remove('disabled');
             right_btn.classList.remove('disabled');
         }
 
-        if (carousal_inner.scrollLeft === carousal_inner.scrollWidth - carousal_inner.offsetWidth) {
+        if (carousel_inner.scrollLeft === carousel_inner.scrollWidth - carousel_inner.offsetWidth) {
             right_btn.classList.add('disabled');
         }
     })
-
 }
